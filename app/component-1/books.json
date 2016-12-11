@@ -1,0 +1,39 @@
+[
+    {
+        "genre": "Crime",
+        "year": 1965,
+        "title": "Sherlock Holmes",
+        "author": "Arthur Conan Doyle"
+    },
+    {
+        "genre": "Crime",
+        "year": 2005,
+        "title": "The girl with the dragon tattoo",
+        "author": "Stieg Larson"
+    },
+    {
+        "genre": "Fantasy",
+        "year": 1996,
+        "title": "Game of Thrones",
+        "author": "George Martin"
+    },
+    {
+        "genre": "Fantasy",
+        "year": 1998,
+        "title": "A clash of kings",
+        "author": "George Martin"
+    },
+    {
+        "genre": "Fantasy",
+        "year": 2000,
+        "title": "A storm of swords",
+        "author": "George Martin"
+    },
+    {
+        "genre": "Classic",
+        "year": 1949,
+        "title": "Nineteen Eighty-Four",
+        "author": "George Orwell"
+    }
+
+]

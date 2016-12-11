@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<body>
+  <div class="container">
+    <div class="jumbotron">
+      <section>
+          <h2>Library</h2>
+          <table class="table table-striped table-bordered">
+              <tr>
+                <th>
+                  Title
+                </th>
+                <th>
+                  Author
+                </th>
+                <th>
+                  Genre
+                </th>
+                <th>
+                  Year
+                </th>
+              </tr>
+              <tr ng-click="setSelected(book)" ng-repeat="book in books | orderBy : 'year'">
+                <td>
+                  <strong>{{book.title}}</strong>
+                </td>
+                <td>
+                  {{book.author}}
+                </td>
+                <td>
+                  {{book.genre}}
+                </td>
+                <td>
+                  {{book.year}}
+                </td>
+              </tr>
+          </table>
+          <div>
+            <button ng-click="openModal()" type="button" class="btn btn-primary">Add book</button>
+            <button ng-click="openEditModal()" type="button" class="btn btn-primary">Edit book</button>
+          </div>
+      </section>
+    </div>
+  </div>
+
+</body>
+</html>

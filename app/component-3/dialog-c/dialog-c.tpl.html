@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+  
+</head>
+<body>
+  <div class="container">
+    <div class="jumbotron">
+      <section>
+          <h2>Your tasks</h2>
+          <div class="form-group">
+              <label for="filter">Filter by task name:</label>
+              <input ng-model="taskName" type="text" class="form-control" id="filter">
+          </div>
+          <div class="form-group">
+              <label for="filter">Filter by task category:</label>
+              <input ng-model="taskCategory" type="text" class="form-control" id="filter">
+          </div>
+          <div class="form-group">
+              <label for="filter">Filter by date:</label>
+              <input ng-model="taskDate" type="text" class="form-control" id="filter">
+          </div>
+          <div class="form-group">
+              <label for="filter">Filter by priority:</label>
+              <input ng-model="taskPriority" type="text" class="form-control" id="filter">
+          </div>
+          <table class="table table-striped table-bordered">
+              <tr> </span>
+                <th>
+                  Title
+                </th>
+                <th>
+                  Category
+                </th>
+                <th>
+                  Date
+                </th>
+                <th>
+                  Priority
+                </th>
+                <th>
+                  Description
+                </th>
+              </tr>
+              <tr ng-click="setSelected(task)" ng-repeat="task in tasks | orderBy : 'date' | filter:{title: taskName} | filter:{category: taskCategory} | filter:{date: taskDate} | filter:{priority: taskPriority}">
+                <td>
+                  <strong>{{task.title}}</strong>
+                </td>
+                <td>
+                  {{task.category}}
+                </td>
+                <td>
+                  {{task.date | date :  "dd.MM.y" }}
+                </td>
+                <td>
+                  {{task.priority}}
+                </td>
+                <td>
+                  {{task.description}}
+                </td>
+              </tr>
+          </table>
+          <div>
+            <button ng-click="openModal()" type="button" class="btn btn-primary">Add task</button>
+            <button ng-click="openEditModal()" type="button" class="btn btn-danger">Edit task</button>
+          </div>
+
+      </section>
+    </div>
+  </div>
+</body>
+</html>

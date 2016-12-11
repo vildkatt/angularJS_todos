@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<div class="modal-content">
+    <div class="modal-header">
+        <h3 class="modal-title">Add task</h3>
+    </div>
+    <div class="modal-body">
+      <form name="modalForm">
+          <div class="form-group">
+            <label for="title">Title:</label>
+            <input ng-required="true" ng-model="addedTask.title" type="text" class="form-control" id="title">
+          </div>
+          <div class="form-group">
+            <label for="category">Category:</label>
+            <input ng-required="true" ng-model="addedTask.category" type="text" class="form-control" id="category">
+          </div>
+          <div class="form-group">
+            <label for="date">Date:</label>
+            <!--<datepicker ng-model="date.value" min="minDate" placeholder="Set release date" show-weeks="true" id="year"></datepicker>-->
+            <input ng-model="addedTask.date" ng-pattern="/^\d+$/" type="text" class="form-control" id="date">
+          </div>
+          <div class="form-group">
+            <label for="priority">Priority:</label>
+            <input ng-model="addedTask.priority" type="text" class="form-control" id="priority">
+          </div>
+          <div class="form-group">
+            <label for="priority">Description:</label>
+            <input ng-model="addedTask.description" type="text" class="form-control" id="description">
+          </div>
+        </div>
+        <div class="modal-footer ">
+            <button ng-disabled="modalForm.$invalid" class="btn btn-primary" data-ng-click="ok()">Add task</button>
+        </div>
+      </form>
+</div>
+</body>
+</html>
