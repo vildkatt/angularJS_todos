@@ -2,6 +2,26 @@
     font-size: 30px;
 }
 
+.glyphicon.glyphicon-flash {
+  color:orange;
+}
+
+.glyphicon.glyphicon-heart {
+  color:red;
+}
+
+.glyphicon.glyphicon-home {
+  color:black;
+}
+
+.glyphicon.glyphicon-globe {
+  color:blue;
+}
+
+.glyphicon.glyphicon-tree-conifer{
+  color:green;
+}
+
 th, td {
     padding: 10px;
     text-align: center;
