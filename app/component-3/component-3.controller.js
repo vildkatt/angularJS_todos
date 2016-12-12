@@ -8,6 +8,26 @@ angular.module('app.component3')
    $scope.taskDate = '';
    $scope.taskPriority = '';
 
+   $scope.data = response.data;
+     $scope.viewby = 5;
+     $scope.totalItems = $scope.data.length;
+     $scope.currentPage = 1;
+     $scope.itemsPerPage = $scope.viewby;
+     $scope.maxSize = 3; //Number of pager buttons to show
+
+     $scope.setPage = function (pageNo) {
+       $scope.currentPage = pageNo;
+     };
+
+     $scope.pageChanged = function() {
+       console.log('Page changed to: ' + $scope.currentPage);
+     };
+
+   $scope.setItemsPerPage = function(num) {
+     $scope.itemsPerPage = num;
+     $scope.currentPage = 1; //reset to first page
+   }
+
    $scope.selectedTask = null;
 
    $scope.setSelected = function (selectedTask) {
@@ -23,7 +43,6 @@ angular.module('app.component3')
    modal.result.then(function(addedTask) {
             $scope.tasks.push(addedTask);
         });
-
    };
 
    $scope.openEditModal = function () {

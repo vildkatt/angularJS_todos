@@ -1,4 +1,4 @@
-angular.module('app.component3', ['ngRoute', 'app.component3.templates'])
+angular.module('app.component3', ['ngRoute','app.component3.templates',  'ui.bootstrap'])
     .config(function ($routeProvider) {
         'use strict';
         $routeProvider.when('/component-3/dialog-c', {

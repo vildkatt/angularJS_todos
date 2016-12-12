@@ -20,20 +20,27 @@
           </div>
 
           <div class="form-group">
-            <label for="category">Category:</label>
-            <input ng-required="true" ng-model="addedTask.category" type="text" class="form-control" id="category">
+            <label for="category">Category:</label><br>
+            <input ng-model="addedTask.category" type="radio" name="category" value="IT"> IT<br>
+            <input ng-model="addedTask.category" type="radio" name="category" value="LIFE"> LIFE<br>
+            <input ng-model="addedTask.category" type="radio" name="category" value="HOME"> HOME<br>
+            <input ng-model="addedTask.category" type="radio" name="category" value="OTHER"> OTHER<br>
+
           </div>
 
           <div class="form-group">
           <label for="date">Date:</label>
-          <p><span class='input-group date' id='datetimepicker1'><input type='text' name="dateTimeInput" class="form-control" data-ng-model="addedTask.date"/><span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
+          <p><span class='input-group date' id='datetimepicker1'><input type='datetime-local' name="dateTimeInput" class="form-control" data-ng-model="addedTask.date"/></span>
                     </span>
                 </p>
            </div>
 
           <div class="form-group">
-            <label for="priority">Priority:</label>
-            <input ng-model="addedTask.priority" type="text" class="form-control" id="priority">
+            <label for="priority">Priority:</label><br>
+            <input ng-model="addedTask.priority" type="radio" name="priority" value="1"> 1 - TOP<br>
+            <input ng-model="addedTask.priority" type="radio" name="priority" value="2"> 2 - HIGH<br>
+            <input ng-model="addedTask.priority" type="radio" name="priority" value="3"> 3 - MEDIUM<br>
+            <input ng-model="addedTask.priority" type="radio" name="priority" value="4"> 4 - LOW<br>
           </div>
 
           <div class="form-group">
@@ -50,14 +57,6 @@
 </div>
 
 <script type="text/javascript">
-$(function () {
-    $('#datetimepicker1').datetimepicker({
-        useStrict: true,
-        format: 'YYYY-MM-DD HH:mm',
-        stepping: 15,
-        allowInputToggle: true
-    });
-});
 </script>
 </body>
 </html>
